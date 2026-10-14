@@ -8,17 +8,18 @@
 <p>Mekhane Apps is the trading name of Sebastián Esperanza, an independent software developer based in Buenos Aires, Argentina (“we”, “us”). We are the controller of the limited personal data described below and we, not Atlassian, are responsible for how our apps handle End User Data. Contact: <a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a>.</p>
 
 <h2>2. Our apps run on Atlassian</h2>
-<p>Our apps are built on Atlassian Forge and run entirely on Atlassian’s infrastructure. They have no servers operated by us, and they do not send data to us or to any third party. We cannot access the content of your notes or your Atlassian site.</p>
+<p>Our apps are built on Atlassian Forge and run entirely on Atlassian’s infrastructure. They have no servers operated by us, and they do not send data to us or to any third party. We cannot access the content of your notes, reminders or your Atlassian site.</p>
 
 <h2>3. What data the apps process</h2>
 <table>
 <tr><th>App</th><th>Data</th><th>Purpose</th><th>Where it is stored</th></tr>
+<tr><td>Follow-up Reminders for Jira</td><td>For each reminder: the issue ID and key, the scheduled time, status, your note, and the Atlassian account IDs of the person who created it and of the recipients. Names and email addresses are not stored; they are looked up from Jira when displayed. The app reads the issue summary, due date, assignee and reporter, and each user’s time zone and locale.</td><td>Delivering the reminder at the right time to the right people, by Jira email and, if you opt in, a comment mentioning them; showing your reminders.</td><td>Atlassian Forge hosted storage for your site, within Atlassian’s data residency arrangements. Email is sent by Jira.</td></tr>
 <tr><td>Rich Text Notes for Jira</td><td>The content of each note (formatted text you write) and the time of the last save. No account IDs or other personal identifiers are stored.</td><td>Showing the note on the dashboard and its last-updated time.</td><td>Atlassian Forge hosted storage for your site, within Atlassian’s data residency arrangements.</td></tr>
 </table>
-<p>The apps request only the Atlassian permissions (“scopes”) they need. Rich Text Notes requests <code>storage:app</code> only; it cannot read issues, projects, users or any other data in your site.</p>
+<p>The apps request only the Atlassian permissions (“scopes”) they need. Rich Text Notes requests <code>storage:app</code> only; it cannot read issues, projects, users or any other data in your site. Follow-up Reminders requests <code>storage:app</code>, <code>read:jira-work</code>, <code>write:jira-work</code> and <code>read:jira-user</code>, used only as described in the table above.</p>
 
 <h2>4. Data retention and deletion</h2>
-<p>Note content stays in Forge storage while the app is installed. Deleting a gadget does not immediately delete its stored note; uninstalling the app makes all stored data subject to Atlassian’s Forge storage retention and deletion rules. You can ask us to help remove specific data at any time by writing to the address above; because we do not hold the data, such requests are carried out through the app itself or by your Atlassian administrator.</p>
+<p>Note content and reminders stay in Forge storage while the app is installed. Deleting a gadget does not immediately delete its stored note; deleting a reminder or its issue deletes the reminder; uninstalling the app makes all stored data subject to Atlassian’s Forge storage retention and deletion rules. You can ask us to help remove specific data at any time by writing to the address above; because we do not hold the data, such requests are carried out through the app itself or by your Atlassian administrator.</p>
 
 <h2>5. Data we collect from you directly</h2>
 <p>If you email us, we keep your message and address to answer you and to keep a record of support history. We do not sell personal data and we do not use it for advertising.</p>
@@ -36,6 +37,7 @@
 <p>Depending on where you live, you may have rights to access, correct, delete or export personal data, and to object to or restrict processing. Write to us and we will respond within 30 days. If you are in the EU or UK, you may also complain to your supervisory authority. Argentine users may contact the Agencia de Acceso a la Información Pública.</p>
 
 <h2>10. Changes</h2>
+<p>Effective 14 October 2026: added Follow-up Reminders for Jira.</p>
 <p>We will post changes on this page with a new effective date and, for material changes, notify administrators of installed apps through the Marketplace.</p>
 </div>
 </main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../privacy/">Privacy</a> &middot; <a href="../terms/">Terms</a></span></footer></div></body></html>

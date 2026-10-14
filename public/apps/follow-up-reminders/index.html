@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Follow-up Reminders for Jira · Documentation</title><meta name="description" content="Documentation for Follow-up Reminders for Jira: set reminders on issues for yourself or teammates, delivery by email and comment, limits, data and privacy."><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Documentation</p>
+<h1>Follow-up Reminders for Jira</h1>
+<p class="lede">Set a reminder on any issue for yourself, the assignee, the reporter or any teammates. At the time you choose, Jira emails them with your note and a link; optionally, the app also posts a comment that triggers Jira’s in-app notification.</p>
+<p><a class="btn" href="https://marketplace.atlassian.com/search?query=Follow-up%20Reminders%20for%20Jira">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../support/">Support</a></p>
+
+<h2>Install</h2>
+<ol>
+  <li>A Jira site administrator installs the app from the Atlassian Marketplace (Apps → Explore more apps → search “Follow-up Reminders”).</li>
+  <li>Open any issue. The first time, click the <strong>+</strong> button under the issue title and choose <strong>Follow-up reminders</strong> under Apps. The panel then stays on that issue.</li>
+</ol>
+
+<h2>Set a reminder</h2>
+<ol>
+  <li>In the <strong>Follow-up reminders</strong> panel, click <strong>Set reminder</strong>.</li>
+  <li>Pick the date and time, or use a quick pick: <em>Tomorrow 9:00</em>, <em>In 3 days</em>, <em>Next Monday</em>, <em>Day before due date</em> (shown when the issue has a due date).</li>
+  <li>Choose who to remind. You are selected by default; add the <em>Assignee</em>, the <em>Reporter</em> or search teammates by name. Only people who can see the issue are offered.</li>
+  <li>Add an optional note (up to 1,000 characters).</li>
+  <li>Tick <em>Also post a comment</em> if you want the recipients to get Jira’s in-app notification as well as the email.</li>
+  <li>Click <strong>Set reminder</strong>.</li>
+</ol>
+
+<h2>What recipients receive</h2>
+<ul>
+  <li><strong>Email</strong>, sent by Jira with the subject “Reminder: KEY Issue title”, your note, who set the reminder and a link to the issue. It uses each recipient’s Jira notification email.</li>
+  <li><strong>Comment</strong> (optional): a comment on the issue that mentions the recipients, which shows up in Jira’s notification bell and in their email digest according to their Jira settings.</li>
+</ul>
+<p>Reminders are delivered within five minutes of the chosen time. Times you pick are in your Jira time zone; each recipient sees dates in their own time zone and format.</p>
+
+<h2>Edit, delete and review</h2>
+<ul>
+  <li>Pending reminders can be edited or deleted by the person who created them, from the issue panel or from the <strong>Follow-up Reminders</strong> page in the Apps menu.</li>
+  <li>Sent reminders are kept under <em>Past reminders</em> on the issue and on the <em>Past</em> tab of the page, so you can see what went out and when.</li>
+  <li>Deleting an issue deletes its reminders.</li>
+</ul>
+
+<h2>Permissions</h2>
+<p>Anyone who can view an issue can set reminders on it. Recipients must be able to view the issue; Jira will not deliver a notification about an issue to someone who cannot see it. The app itself needs project access, which Jira grants to apps by default; if an administrator removed the app’s access to a project, reminders there fail and the panel shows the error.</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>Up to 25 pending reminders per issue and 20 recipients per reminder.</li>
+  <li>Reminders are one-off. Recurring reminders are not supported in this version.</li>
+  <li>Reminders are delivered by Jira email and comments; there is no Slack or Teams integration.</li>
+  <li>The panel is not available in the Jira mobile apps (a platform limitation for apps of this kind); reminders set on the web are still delivered.</li>
+</ul>
+
+<h2>Where your data lives</h2>
+<p>Reminders are stored in Atlassian’s Forge hosted storage, inside your Atlassian site’s data boundary: the issue ID and key, the time, the note, and the Atlassian account IDs of the creator and recipients. The app has no servers of its own, sends nothing outside Atlassian, and uses Jira itself to send email. See the <a href="../../privacy/">privacy policy</a>.</p>
+
+<h2>Troubleshooting</h2>
+<table>
+<tr><th>Symptom</th><th>What to check</th></tr>
+<tr><td>I cannot find the panel on an issue</td><td>Click the <strong>+</strong> button under the issue title and choose <strong>Follow-up reminders</strong> under Apps.</td></tr>
+<tr><td>The email did not arrive</td><td>Check the recipient’s Jira notification email and spam folder, and that they can view the issue. Reminders can take up to five minutes. The issue panel shows failed reminders with the reason.</td></tr>
+<tr><td>A teammate does not appear in the search</td><td>Only active Atlassian accounts that can view the issue are offered. Already-selected people are hidden from the results.</td></tr>
+<tr><td>The time looks wrong</td><td>Times are shown in each user’s Jira time zone (profile settings). Check your Jira profile time zone.</td></tr>
+</table>
+
+<h2>Changelog</h2>
+<ul>
+  <li><strong>1.0</strong> — First release: reminders for anyone, exact time, email and optional comment, My reminders page.</li>
+</ul>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a></span></footer></div></body></html>
