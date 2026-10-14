@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mermaid Diagrams Live Editor for Jira · Documentation</title><meta name="description" content="Documentation for Mermaid Diagrams Live Editor for Jira: add diagrams to issues, edit with live preview, zoom, themes, limits, data and privacy."><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Documentation</p>
+<h1>Mermaid Diagrams Live Editor for Jira</h1>
+<p class="lede">Keep Mermaid diagrams on the Jira issues they describe. Several titled diagrams per issue, a live-preview editor, crisp SVG, a click-to-zoom viewer, light and dark themes, and the latest Mermaid release bundled with the app.</p>
+<p><a class="btn" href="https://marketplace.atlassian.com/search?query=Mermaid%20Diagrams%20Live%20Editor%20for%20Jira">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../support/">Support</a></p>
+
+<h2>Install</h2>
+<ol>
+  <li>A Jira site administrator installs the app from the Atlassian Marketplace (Apps → Explore more apps → search “Mermaid Diagrams Live Editor”).</li>
+  <li>Open any issue. The first time, click the apps button under the issue title and choose <strong>Mermaid diagrams</strong>. The panel then stays on that issue.</li>
+</ol>
+
+<h2>Add and edit diagrams</h2>
+<ol>
+  <li>In the <strong>Mermaid diagrams</strong> panel, click <strong>Add diagram</strong>. The editor opens with code on the left and a live preview on the right.</li>
+  <li>Give the diagram a title (optional), pick a theme (match Jira, light or dark), or start from one of the templates: flowchart, sequence, class, state, ER, Gantt, pie, mindmap, timeline, git graph.</li>
+  <li>Click <strong>Save</strong>. The diagram appears in the panel for everyone who can view the issue. Use <strong>Edit</strong> and <strong>Delete</strong> on each diagram; up to 20 diagrams per issue.</li>
+</ol>
+
+<h2>Viewing</h2>
+<ul>
+  <li>Diagrams render as SVG at the panel’s full width, so text stays sharp at any size.</li>
+  <li>Click <strong>Expand</strong>, or double-click a diagram, to open the full-screen viewer. Scroll to zoom, drag to pan, double-click to zoom in. Keyboard: <code>+</code> / <code>-</code> zoom, <code>0</code> fit to window, <code>1</code> actual size, <code>Esc</code> close.</li>
+  <li>With Theme set to “Match Jira”, diagrams redraw automatically when you switch Jira between light and dark mode.</li>
+</ul>
+
+<h2>Supported syntax</h2>
+<p>The app bundles the current Mermaid release and renders with it directly: all diagram types, <code>classDef</code> and <code>style</code> directives, <code>%%{init}%%</code> configuration and themes work as documented at <a href="https://mermaid.js.org/intro/">mermaid.js.org</a>. Diagrams are rendered in Mermaid’s strict mode: HTML inside labels is not interpreted and clickable links in diagrams are disabled.</p>
+
+<h2>Permissions</h2>
+<p>Anyone who can view an issue can see its diagrams. Anyone who can view the issue can add, edit or delete diagrams on it (the app does not add permissions of its own). The app does not record who created or edited a diagram.</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>Up to 20 diagrams per issue and 50 KiB of Mermaid text per diagram.</li>
+  <li>Diagrams are not included in Jira exports, printing or the Jira mobile apps.</li>
+  <li>Deleting an issue deletes its diagrams. Moving or cloning an issue does not copy them.</li>
+</ul>
+
+<h2>Where your data lives</h2>
+<p>Diagrams (issue ID, title, Mermaid source, theme and timestamps) are stored in Atlassian’s Forge hosted storage, inside your Atlassian site’s data boundary. The app has no servers of its own and sends nothing outside Atlassian. Rendering happens in your browser. See the <a href="../../privacy/">privacy policy</a>.</p>
+
+<h2>Troubleshooting</h2>
+<table>
+<tr><th>Symptom</th><th>What to check</th></tr>
+<tr><td>I cannot find the panel on an issue</td><td>Click the apps button under the issue title and choose <strong>Mermaid diagrams</strong>.</td></tr>
+<tr><td>“Mermaid syntax error” on the issue</td><td>Open the diagram with Edit: the preview shows the exact message. Compare at <a href="https://mermaid.live">mermaid.live</a>.</td></tr>
+<tr><td>The panel shows “license inactive”</td><td>A Jira admin needs to renew the app’s subscription on the Atlassian Marketplace. Existing diagrams keep displaying.</td></tr>
+</table>
+
+<h2>Changelog</h2>
+<ul>
+  <li><strong>1.0</strong> — First release: diagrams on issues, live editor, latest Mermaid bundled, full-screen zoom viewer, light and dark themes.</li>
+</ul>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a></span></footer></div></body></html>
