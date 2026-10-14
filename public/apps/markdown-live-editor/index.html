@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Markdown Live Editor for Confluence · Documentation</title><meta name="description" content="Documentation for Markdown Live Editor for Confluence: insert the macro, supported syntax, diagrams and math, search indexing, exports, limits, data and privacy."><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Documentation</p>
+<h1>Markdown Live Editor for Confluence</h1>
+<p class="lede">Paste or write Markdown on a Confluence page and see it rendered: live preview while you edit, GitHub-flavored Markdown with highlighted code, tables, task lists, Mermaid diagrams and LaTeX math. The content is indexed by Confluence search and exports as native content.</p>
+<p><a class="btn" href="https://marketplace.atlassian.com/search?query=Markdown%20Live%20Editor">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../support/">Support</a></p>
+
+<h2>Install</h2>
+<ol>
+  <li>A Confluence site administrator installs the app from the Atlassian Marketplace (Apps → Explore more apps → search “Markdown Live Editor”).</li>
+  <li>Open any page in the editor, type <code>/markdown</code> and choose <strong>Markdown</strong>. The editor opens with an example document.</li>
+</ol>
+
+<h2>Edit</h2>
+<ol>
+  <li>Write or paste Markdown on the left; the preview on the right updates as you type. <strong>Paste from clipboard</strong> replaces the content with what you copied.</li>
+  <li>Options at the top: <strong>Table of contents</strong> (built from your headings), <strong>Line breaks as in source</strong> (a single newline becomes a line break, as in GitHub comments), <strong>Show source under the content</strong>, <strong>Max width</strong> and <strong>Code size</strong>.</li>
+  <li>Drag the divider to resize the panes, then <strong>Save</strong>. To edit later, select the macro on the page and click the pencil.</li>
+</ol>
+
+<h2>Supported syntax</h2>
+<table>
+<tr><th>Feature</th><th>Syntax</th></tr>
+<tr><td>Headings, emphasis, lists, quotes, rules, links</td><td>Standard Markdown</td></tr>
+<tr><td>Tables, task lists, strikethrough, autolinks</td><td>GitHub-flavored Markdown (<code>| a | b |</code>, <code>- [ ] task</code>, <code>~~text~~</code>)</td></tr>
+<tr><td>Code with highlighting</td><td><code>```js … ```</code> (40+ languages; a copy button appears on hover)</td></tr>
+<tr><td>Mermaid diagrams</td><td><code>```mermaid … ```</code>; double-click a diagram to open it full screen with zoom</td></tr>
+<tr><td>LaTeX math</td><td><code>$inline$</code> and <code>$$block$$</code>, rendered with KaTeX</td></tr>
+<tr><td>Footnotes</td><td><code>text[^1]</code> and <code>[^1]: note</code></td></tr>
+<tr><td>Images</td><td><code>![alt](https://…)</code> is shown as a link that opens the image in a new tab (see below)</td></tr>
+<tr><td>Raw HTML</td><td>Not interpreted: HTML tags are shown as text</td></tr>
+</table>
+<p>Links to pages in your Confluence site open in the same tab; other links open in a new tab.</p>
+
+<h2>Search</h2>
+<p>The Markdown you save is added to the Confluence search index. Searching for words or phrases that only exist inside the macro finds the page, and the result shows the matching snippet. New or edited content appears in search within a few minutes.</p>
+
+<h2>Exports (PDF and Word)</h2>
+<p>When a page is exported, the macro converts your Markdown to native Confluence content: headings, bold and italic, lists, task lists, tables, quotes, rules and code blocks. Mermaid diagrams are exported as their source code and formulas as LaTeX text, because exports cannot run the browser code that draws them.</p>
+
+<h2>Why images are shown as links</h2>
+<p>Loading images from external websites would require the app to declare external network access, which removes its <em>Runs on Atlassian</em> status (the guarantee that no data leaves Atlassian). We chose to keep that guarantee: images referenced by URL are shown as a labelled link that opens the image in a new tab. Tell us if you need inline images and we will consider an opt-in option.</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>Up to 100 KiB of Markdown per macro (roughly 15,000 words). Add more macros for longer documents.</li>
+  <li>Rendering happens in the web editor and page view; the macro is not available in the Confluence mobile apps.</li>
+</ul>
+
+<h2>Where your data lives</h2>
+<p>The Markdown source and its settings are stored in the macro’s configuration, inside the Confluence page: versioned, copied and exported with the page. The app has no servers, stores nothing elsewhere, reads no other content and sends nothing outside Atlassian. See the <a href="../../privacy/">privacy policy</a>.</p>
+
+<h2>Troubleshooting</h2>
+<table>
+<tr><th>Symptom</th><th>What to check</th></tr>
+<tr><td>A table does not render</td><td>GFM tables need a header row and a separator line (<code>|---|---|</code>) with the same number of columns.</td></tr>
+<tr><td>Single line breaks are ignored</td><td>That is standard Markdown. Enable <strong>Line breaks as in source</strong> or end lines with two spaces.</td></tr>
+<tr><td>A formula shows as text</td><td>Check that the formula is between <code>$</code> signs without spaces next to them, e.g. <code>$E = mc^2$</code>.</td></tr>
+<tr><td>Search does not find new text yet</td><td>Indexing takes a few minutes after saving. Confirm the page itself appears when searching its title.</td></tr>
+</table>
+
+<h2>Changelog</h2>
+<ul>
+  <li><strong>1.0</strong> — First release: live editor, GitHub-flavored Markdown, code highlighting, Mermaid, LaTeX, search indexing, native exports, light and dark mode.</li>
+</ul>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a></span></footer></div></body></html>
