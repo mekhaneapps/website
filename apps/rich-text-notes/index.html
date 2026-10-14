@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rich Text Notes for Jira · Documentation</title><meta name="description" content="Documentation for Rich Text Notes for Jira: install, add the gadget, write formatted notes and checklists, limits, data and privacy."><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Documentation</p>
+<h1>Rich Text Notes for Jira</h1>
+<p class="lede">A dashboard gadget for formatted notes: headings, lists, checklists you can tick from the dashboard, links, quotes and code. Matches Jira’s light and dark themes.</p>
+<p><a class="btn" href="https://marketplace.atlassian.com/search?query=Rich%20Text%20Notes%20for%20Jira">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../support/">Support</a></p>
+
+<h2>Install</h2>
+<ol>
+  <li>A Jira site administrator installs the app from the Atlassian Marketplace (Apps → Explore more apps → search “Rich Text Notes”).</li>
+  <li>Open any dashboard you can edit and choose <strong>Add gadget</strong>.</li>
+  <li>Search for <strong>Rich Text Notes</strong> and add it. The gadget appears empty with a hint to edit it.</li>
+</ol>
+
+<h2>Write a note</h2>
+<ol>
+  <li>Open the gadget menu (<strong>···</strong>) and choose <strong>Edit</strong>.</li>
+  <li>Write using the toolbar or Markdown-style shortcuts: <code># </code> heading, <code>- </code> bullet list, <code>1. </code> numbered list, <code>[ ] </code> checklist, <code>&gt; </code> quote, <code>```</code> code block.</li>
+  <li>Press <strong>Save</strong>. The note is stored and shown to everyone who can see the dashboard.</li>
+</ol>
+<table>
+<tr><th>Formatting</th><th>Shortcut</th></tr>
+<tr><td>Bold / Italic / Underline</td><td>Ctrl+B / Ctrl+I / Ctrl+U (Cmd on Mac)</td></tr>
+<tr><td>Strikethrough / Inline code</td><td>Toolbar</td></tr>
+<tr><td>Headings 1–3</td><td><code>#</code>, <code>##</code>, <code>###</code> followed by a space</td></tr>
+<tr><td>Bullet / numbered list</td><td><code>-</code> or <code>1.</code> followed by a space</td></tr>
+<tr><td>Checklist</td><td><code>[ ]</code> followed by a space</td></tr>
+<tr><td>Quote / code block / divider</td><td><code>&gt;</code>, <code>```</code>, <code>---</code></td></tr>
+<tr><td>Link</td><td>Select text and use the link button; paste a URL to link it automatically</td></tr>
+<tr><td>Undo / Redo</td><td>Ctrl+Z / Ctrl+Shift+Z</td></tr>
+</table>
+
+<h2>Checklists on the dashboard</h2>
+<p>Checklist items can be ticked directly in the dashboard view, without opening the editor. Each change is saved immediately and visible to everyone viewing the dashboard. Ticked items are shown struck through.</p>
+
+<h2>Permissions and who can edit</h2>
+<p>Anyone who can edit the dashboard can edit the note; anyone who can view the dashboard can read it and tick checklist items. The gadget follows Jira’s dashboard permissions and adds none of its own.</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>One note per gadget. Add more gadgets for more notes.</li>
+  <li>A note can hold up to 100 KiB of formatted text, roughly 15,000 words. The editor tells you if you reach the limit.</li>
+  <li>Notes are text only. Images and attachments are not supported in this version.</li>
+  <li>Copying a dashboard creates new gadgets with empty notes; notes are not duplicated.</li>
+</ul>
+
+<h2>Where your data lives</h2>
+<p>Notes are stored in Atlassian’s Forge hosted storage, inside your Atlassian site’s data boundary. The app has no servers of its own and sends nothing outside Atlassian. See the <a href="../../privacy/">privacy policy</a> for details.</p>
+<p>Uninstalling the app removes the gadgets from dashboards. Stored notes are deleted according to Atlassian’s Forge storage retention after uninstall.</p>
+
+<h2>Troubleshooting</h2>
+<table>
+<tr><th>Symptom</th><th>What to check</th></tr>
+<tr><td>The gadget shows “Loading…” for a long time</td><td>Reload the page. If it persists, the app may still be installing; wait a minute and try again.</td></tr>
+<tr><td>“Could not load this note”</td><td>Your account may lack permission on this dashboard, or the app was uninstalled and reinstalled. Contact your Jira admin, then us.</td></tr>
+<tr><td>Formatting looks wrong in dark mode</td><td>Reload once after switching themes. If it stays wrong, send us a screenshot.</td></tr>
+<tr><td>The gadget does not appear in “Add gadget”</td><td>Confirm the app is installed (Apps → Manage apps) and refresh the dashboard.</td></tr>
+</table>
+
+<h2>Changelog</h2>
+<ul>
+  <li><strong>1.0</strong> — First release: formatted notes, interactive checklists, links, light and dark themes.</li>
+</ul>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a></span></footer></div></body></html>
