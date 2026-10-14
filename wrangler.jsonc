@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers: serve the static site from ./public (no build step).
+  "name": "website",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
