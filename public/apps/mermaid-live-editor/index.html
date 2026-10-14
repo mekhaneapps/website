@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mermaid Diagrams Live Editor for Confluence · Documentation</title><meta name="description" content="Documentation for Mermaid Diagrams Live Editor for Confluence: insert the macro, edit with live preview, zoom, themes, exports, limits, data and privacy."><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Documentation</p>
+<h1>Mermaid Diagrams Live Editor for Confluence</h1>
+<p class="lede">Write Mermaid diagrams as text and see them rendered on your Confluence pages. Live preview while you edit, crisp SVG at full width, click-to-zoom viewer, light and dark themes, and the latest Mermaid release bundled with the app.</p>
+<p><a class="btn" href="https://marketplace.atlassian.com/search?query=Mermaid%20Diagrams%20Live%20Editor">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../support/">Support</a></p>
+
+<h2>Install</h2>
+<ol>
+  <li>A Confluence site administrator installs the app from the Atlassian Marketplace (Apps → Explore more apps → search “Mermaid Diagrams Live Editor”).</li>
+  <li>Open any page in the editor, type <code>/mermaid</code> and choose <strong>Mermaid diagram</strong>. The editor opens with an example flowchart.</li>
+</ol>
+
+<h2>Edit a diagram</h2>
+<ol>
+  <li>Write or paste Mermaid code on the left. The preview on the right updates as you type; syntax errors are shown above the preview with Mermaid’s own message.</li>
+  <li>Use the <strong>Templates</strong> row to start from a flowchart, sequence, class, state, ER, Gantt, pie, mindmap, timeline or git graph.</li>
+  <li>Optional settings at the top: a <strong>Title</strong> shown above the diagram, the <strong>Theme</strong> (match Confluence, light or dark), <strong>Align</strong> (center or left), a <strong>Max width</strong> in pixels, and <strong>Show source under the diagram</strong> for readers who want to copy the code.</li>
+  <li>Drag the divider to resize the panes. Press <strong>Save</strong>. To edit later, select the macro on the page and click the pencil.</li>
+</ol>
+
+<h2>Viewing diagrams</h2>
+<ul>
+  <li>Diagrams render as SVG at the page’s full width, so text stays sharp at any size.</li>
+  <li>Hover over a diagram and click <strong>Expand</strong>, or double-click it, to open the full-screen viewer. Scroll to zoom, drag to pan, double-click to zoom in. Keyboard: <code>+</code> / <code>-</code> zoom, <code>0</code> fit to window, <code>1</code> actual size, <code>Esc</code> close.</li>
+  <li>With Theme set to “Match Confluence”, the diagram redraws automatically when you switch Confluence between light and dark mode.</li>
+</ul>
+
+<h2>Exports (PDF and Word)</h2>
+<p>Confluence exports cannot run the browser code that draws diagrams. In exported documents the macro shows the diagram title and its Mermaid source in a code block, so the information is never lost. Rendered images in exports are planned for a later release.</p>
+
+<h2>Supported syntax</h2>
+<p>The app bundles the current Mermaid release and renders with it directly, so everything Mermaid supports works: all diagram types, <code>classDef</code> and <code>style</code> directives, <code>%%{init}%%</code> configuration, themes and comments. Mermaid’s own documentation applies: <a href="https://mermaid.js.org/intro/">mermaid.js.org</a>. For security, diagrams are rendered in Mermaid’s strict mode: HTML inside labels is not interpreted and clickable links in diagrams are disabled.</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>Up to 50 KiB of Mermaid text per diagram (roughly 600 nodes). Very large diagrams take a few seconds to lay out; the page shows “Rendering diagram…” meanwhile.</li>
+  <li>One diagram per macro. Add more macros for more diagrams.</li>
+  <li>Diagrams render in the Confluence web editor and page view. They are not available in the Confluence mobile apps.</li>
+</ul>
+
+<h2>Where your data lives</h2>
+<p>The diagram source and its settings are stored in the macro’s configuration, inside the Confluence page itself: they are versioned, copied and exported with the page. The app has no servers, stores nothing elsewhere, reads no other content and sends nothing outside Atlassian. Rendering happens in your browser. See the <a href="../../privacy/">privacy policy</a>.</p>
+
+<h2>Troubleshooting</h2>
+<table>
+<tr><th>Symptom</th><th>What to check</th></tr>
+<tr><td>“Mermaid syntax error” on the page</td><td>Open the macro editor: the preview shows the exact message. Mermaid is strict about indentation and arrow syntax; try the diagram at <a href="https://mermaid.live">mermaid.live</a> to compare.</td></tr>
+<tr><td>“Edge limit exceeded” or “text size exceeded”</td><td>The diagram is beyond the app’s limits. Split it into several macros.</td></tr>
+<tr><td>Labels look cut off</td><td>Reload the page once. If it persists, send us the diagram source.</td></tr>
+<tr><td>The macro shows “Edit this macro to add your diagram”</td><td>The macro was inserted without saving a diagram. Select it and click the pencil to open the editor.</td></tr>
+</table>
+
+<h2>Changelog</h2>
+<ul>
+  <li><strong>1.0</strong> — First release: live editor, latest Mermaid bundled, full-screen zoom viewer, light and dark themes, exports with source.</li>
+</ul>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a></span></footer></div></body></html>
