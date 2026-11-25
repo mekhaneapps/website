@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to add Mermaid diagrams to Jira Cloud issues · Mekhane Apps</title><meta name="description" content="Jira Cloud does not render Mermaid on its own. Here is how to keep live, editable Mermaid diagrams on the issues they describe, step by step, with an example."><link rel="canonical" href="https://mekhaneapps.com/guides/mermaid-diagrams-in-jira-cloud/"><meta property="og:type" content="article"><meta property="og:title" content="How to add Mermaid diagrams to Jira Cloud issues · Mekhane Apps"><meta property="og:description" content="Jira Cloud does not render Mermaid on its own. Here is how to keep live, editable Mermaid diagrams on the issues they describe, step by step, with an example."><meta property="og:url" content="https://mekhaneapps.com/guides/mermaid-diagrams-in-jira-cloud/"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to add Mermaid diagrams to Jira Cloud issues", "description": "Jira Cloud does not render Mermaid on its own. Here is how to keep live, editable Mermaid diagrams on the issues they describe, step by step, with an example.", "author": {"@type": "Organization", "name": "Mekhane Apps", "url": "https://mekhaneapps.com"}, "publisher": {"@type": "Organization", "name": "Mekhane Apps", "url": "https://mekhaneapps.com"}, "datePublished": "2026-11-26", "mainEntityOfPage": "https://mekhaneapps.com/guides/mermaid-diagrams-in-jira-cloud/"}</script></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../guides/">Guides</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Guide · Jira Cloud</p>
+<h1>How to add Mermaid diagrams to Jira Cloud issues</h1>
+<p class="lede">Mermaid lets you describe a diagram as text and have it drawn for you. Jira Cloud does not draw Mermaid by itself: if you paste Mermaid code into an issue, you get a code block, not a diagram. This guide shows the options and the quickest way to keep real, editable diagrams on your issues.</p>
+
+<h2>Why put the diagram on the issue</h2>
+<p>A diagram is most useful next to the work it explains: the approval flow on the process-change issue, the sequence of calls on the bug, the states on the feature. When the diagram lives in a separate tool, it goes stale, people need another account to see it, and the link breaks when someone leaves.</p>
+<p>Keeping it as Mermaid text has one more advantage: anyone can change a box or an arrow in seconds, without redrawing anything.</p>
+
+<h2>Your options</h2>
+<table>
+<tr><th>Option</th><th>Works for</th><th>Drawback</th></tr>
+<tr><td>Paste the code in a code block</td><td>Keeping the source</td><td>Readers see code, not a diagram</td></tr>
+<tr><td>Draw it elsewhere and attach a PNG</td><td>A one-off picture</td><td>Out of date after the first change; the source is lost</td></tr>
+<tr><td>Link to an external diagram tool</td><td>Teams that already use one</td><td>Another account, and your content leaves Atlassian</td></tr>
+<tr><td>An app that renders Mermaid in the issue</td><td>Living diagrams on the issue</td><td>Needs an admin to install it once</td></tr>
+</table>
+
+<h2>Step by step with Mermaid Diagrams Live Editor for Jira</h2>
+<ol>
+  <li>A Jira administrator installs <a href="https://marketplace.atlassian.com/apps/4190433891/mermaid-diagrams-live-editor-for-jira">Mermaid Diagrams Live Editor for Jira</a> from the Atlassian Marketplace. It is free for up to 10 users.</li>
+  <li>Open an issue. The first time, click the apps button under the issue title and choose <strong>Mermaid diagrams</strong>. The panel stays on that issue.</li>
+  <li>Click <strong>Add diagram</strong>, give it a title, and type or paste your Mermaid code. The preview on the right updates as you type, and syntax errors appear with Mermaid’s own message. If you are starting from scratch, pick a template: flowchart, sequence, class, state, ER, Gantt, pie, mindmap, timeline or git graph.</li>
+  <li>Click <strong>Save</strong>. Everyone who can see the issue now sees the diagram, drawn as sharp SVG. Use <strong>Expand</strong> to open it full screen with zoom and pan.</li>
+</ol>
+<figure class="shot"><img src="../../assets/guides/mermaid-jira-issue.webp" alt="A change approval flowchart in the Mermaid diagrams panel of a Jira issue" width="1380" height="675" loading="lazy"><figcaption>The diagram sits on the issue, under the description.</figcaption></figure>
+
+<h2>Example: a change approval flow</h2>
+<p>Copy this into the editor to see it drawn:</p>
+<pre><code>flowchart LR
+  A([Change requested]) --&gt; B{Risk level?}
+  B -- Low --&gt; C[Peer review]
+  B -- High --&gt; D[CAB review]
+  C --&gt; E{Approved?}
+  D --&gt; E
+  E -- Yes --&gt; F[Schedule deployment]
+  E -- No --&gt; G[Back to requester]
+  G --&gt; A
+  F --&gt; H([Change closed])</code></pre>
+<p>A sequence diagram works the same way, and is handy on bugs and integration tasks:</p>
+<pre><code>sequenceDiagram
+  participant U as User
+  participant W as Web app
+  participant A as Auth service
+  U-&gt;&gt;W: Sign in
+  W-&gt;&gt;A: Validate credentials
+  A--&gt;&gt;W: Token
+  W--&gt;&gt;U: Dashboard</code></pre>
+<figure class="shot"><img src="../../assets/guides/mermaid-jira-editor.webp" alt="The Mermaid editor with code on the left and a live preview on the right" width="1380" height="675" loading="lazy"><figcaption>Code on the left, live preview on the right.</figcaption></figure>
+
+<h2>Tips</h2>
+<ul>
+  <li><strong>One idea per diagram.</strong> Several small titled diagrams on an issue (up to 20) read better than one huge one.</li>
+  <li><strong>Use colors sparingly.</strong> Mermaid’s <code>classDef</code> lets you highlight the risky step or the happy path; the app supports it, along with <code>style</code> and <code>%%{init}%%</code>.</li>
+  <li><strong>Dark mode.</strong> Leave the theme on “Match Jira” and the diagram redraws when someone switches Jira to dark mode.</li>
+  <li><strong>Test bigger diagrams</strong> at <a href="https://mermaid.live">mermaid.live</a> if you want to compare output; the app bundles the current Mermaid release, so the syntax is the same.</li>
+</ul>
+<figure class="shot"><img src="../../assets/guides/mermaid-jira-dark.webp" alt="The full-screen diagram viewer in Jira dark mode, with zoom controls" width="1380" height="675" loading="lazy"><figcaption>Full-screen viewer, here in Jira’s dark theme.</figcaption></figure>
+
+<h2>Questions</h2>
+<h3>Does my diagram leave Atlassian?</h3>
+<p>No. The app is built on Forge and qualifies for Runs on Atlassian: diagrams are stored in Atlassian-hosted storage and drawn in your browser. There is no external account and no server of ours involved.</p>
+<h3>Who can see and edit diagrams?</h3>
+<p>Anyone who can view the issue can see its diagrams and edit them. Deleting the issue deletes its diagrams.</p>
+<h3>Can I use Mermaid in Confluence too?</h3>
+<p>Yes, see <a href="../mermaid-diagrams-in-confluence-cloud/">how to add Mermaid diagrams to Confluence Cloud pages</a>.</p>
+
+<p><a class="btn" href="https://marketplace.atlassian.com/apps/4190433891/mermaid-diagrams-live-editor-for-jira">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../apps/mermaid-jira-live-editor/">Documentation</a></p>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a> &middot; <a href="../../dpa/">DPA</a></span></footer></div></body></html>

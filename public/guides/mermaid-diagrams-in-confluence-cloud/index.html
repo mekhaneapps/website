@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to add Mermaid diagrams to Confluence Cloud pages · Mekhane Apps</title><meta name="description" content="Confluence Cloud shows Mermaid code as plain text. Learn how to render Mermaid diagrams on Confluence pages with a live preview, dark mode and zoom, step by step."><link rel="canonical" href="https://mekhaneapps.com/guides/mermaid-diagrams-in-confluence-cloud/"><meta property="og:type" content="article"><meta property="og:title" content="How to add Mermaid diagrams to Confluence Cloud pages · Mekhane Apps"><meta property="og:description" content="Confluence Cloud shows Mermaid code as plain text. Learn how to render Mermaid diagrams on Confluence pages with a live preview, dark mode and zoom, step by step."><meta property="og:url" content="https://mekhaneapps.com/guides/mermaid-diagrams-in-confluence-cloud/"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to add Mermaid diagrams to Confluence Cloud pages", "description": "Confluence Cloud shows Mermaid code as plain text. Learn how to render Mermaid diagrams on Confluence pages with a live preview, dark mode and zoom, step by step.", "author": {"@type": "Organization", "name": "Mekhane Apps", "url": "https://mekhaneapps.com"}, "publisher": {"@type": "Organization", "name": "Mekhane Apps", "url": "https://mekhaneapps.com"}, "datePublished": "2026-11-26", "mainEntityOfPage": "https://mekhaneapps.com/guides/mermaid-diagrams-in-confluence-cloud/"}</script></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../guides/">Guides</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Guide · Confluence Cloud</p>
+<h1>How to add Mermaid diagrams to Confluence Cloud pages</h1>
+<p class="lede">Mermaid turns a few lines of text into flowcharts, sequence diagrams, timelines and more. Confluence Cloud does not draw Mermaid on its own: pasted into a page, the code stays code. Here is how to get real diagrams on your pages and keep them editable as text.</p>
+
+<h2>Why text diagrams work well in Confluence</h2>
+<ul>
+  <li><strong>Easy to update.</strong> Rename a step or add an arrow by editing a line, instead of redrawing boxes.</li>
+  <li><strong>Versioned with the page.</strong> When the diagram is part of the page, Confluence page history covers it too.</li>
+  <li><strong>Reusable.</strong> The same Mermaid code works in GitHub, GitLab, Notion and many other tools.</li>
+</ul>
+
+<h2>Step by step with Mermaid Diagrams Live Editor for Confluence</h2>
+<ol>
+  <li>A Confluence administrator installs <a href="https://marketplace.atlassian.com/apps/2594798356/mermaid-diagrams-live-editor-for-confluence">Mermaid Diagrams Live Editor for Confluence</a> from the Atlassian Marketplace. It is free for up to 10 users.</li>
+  <li>Edit a page, type <code>/mermaid</code> and choose <strong>Mermaid diagram</strong>. The editor opens with an example.</li>
+  <li>Write or paste your code on the left. The preview on the right updates as you type, and errors show Mermaid’s own message. Templates are there for every common diagram type.</li>
+  <li>Optionally set a title, theme (match Confluence, light or dark), alignment and maximum width, then <strong>Save</strong>. The diagram is drawn as sharp SVG at the page’s full width.</li>
+</ol>
+<figure class="shot"><img src="../../assets/guides/mermaid-confluence-editor.webp" alt="The Mermaid macro editor in Confluence with code and live preview" width="1380" height="675" loading="lazy"><figcaption>The macro editor: code, templates and live preview.</figcaption></figure>
+
+<h2>Example</h2>
+<pre><code>flowchart LR
+  A([Change requested]) --&gt; B{Risk level?}
+  B -- Low --&gt; C[Peer review]
+  B -- High --&gt; D[CAB review]
+  C --&gt; E{Approved?}
+  D --&gt; E
+  E -- Yes --&gt; F[Schedule deployment]
+  E -- No --&gt; G[Back to requester]
+  G --&gt; A
+  F --&gt; H([Change closed])</code></pre>
+<figure class="shot"><img src="../../assets/guides/mermaid-confluence-page.webp" alt="A styled flowchart rendered on a Confluence page" width="1380" height="675" loading="lazy"><figcaption>The same kind of flowchart, rendered on a page.</figcaption></figure>
+
+<h2>Tips</h2>
+<ul>
+  <li><strong>Readers can zoom.</strong> Hover over a diagram and click Expand, or double-click it, for a full-screen view with zoom and pan.</li>
+  <li><strong>Let people copy the code.</strong> Turn on “Show source under the diagram” on reference pages, so readers can reuse it.</li>
+  <li><strong>Exports.</strong> PDF and Word exports cannot run the code that draws diagrams, so the app exports the title and the Mermaid source instead: the information is never lost.</li>
+  <li><strong>Very large diagrams</strong> (hundreds of nodes) work, but split them into several macros when you can; they are easier to read.</li>
+</ul>
+
+<h2>Questions</h2>
+<h3>Where is the diagram stored?</h3>
+<p>Inside the page itself, in the macro’s configuration. It is versioned, copied and exported with the page. The app has no servers and sends nothing outside Atlassian.</p>
+<h3>Which Mermaid version does it use?</h3>
+<p>The current Mermaid release is bundled with the app, so all diagram types, <code>classDef</code>, <code>style</code> and themes work as documented at <a href="https://mermaid.js.org/intro/">mermaid.js.org</a>.</p>
+<h3>Can I mix Mermaid with Markdown?</h3>
+<p>Yes: if you write documentation in Markdown, see <a href="../markdown-in-confluence-cloud/">how to use Markdown in Confluence Cloud</a>. Mermaid code blocks inside Markdown are drawn too.</p>
+
+<p><a class="btn" href="https://marketplace.atlassian.com/apps/2594798356/mermaid-diagrams-live-editor-for-confluence">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../apps/mermaid-live-editor/">Documentation</a></p>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a> &middot; <a href="../../dpa/">DPA</a></span></footer></div></body></html>

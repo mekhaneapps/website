@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to set a reminder on a Jira Cloud issue · Mekhane Apps</title><meta name="description" content="Jira Cloud has no built-in “remind me about this issue” button. Compare watching, due dates with automation, and per-issue reminders that email you or a teammate at the exact time you choose."><link rel="canonical" href="https://mekhaneapps.com/guides/jira-issue-reminders/"><meta property="og:type" content="article"><meta property="og:title" content="How to set a reminder on a Jira Cloud issue · Mekhane Apps"><meta property="og:description" content="Jira Cloud has no built-in “remind me about this issue” button. Compare watching, due dates with automation, and per-issue reminders that email you or a teammate at the exact time you choose."><meta property="og:url" content="https://mekhaneapps.com/guides/jira-issue-reminders/"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap"><link rel="stylesheet" href="../../assets/site.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to set a reminder on a Jira Cloud issue", "description": "Jira Cloud has no built-in \u201cremind me about this issue\u201d button. Compare watching, due dates with automation, and per-issue reminders that email you or a teammate at the exact time you choose.", "author": {"@type": "Organization", "name": "Mekhane Apps", "url": "https://mekhaneapps.com"}, "publisher": {"@type": "Organization", "name": "Mekhane Apps", "url": "https://mekhaneapps.com"}, "datePublished": "2026-11-26", "mainEntityOfPage": "https://mekhaneapps.com/guides/jira-issue-reminders/"}</script></head><body><div class="wrap"><header class="top"><a class="brand" href="../../"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5l11.7 6.75v13.5L16 29.5 4.3 22.75V9.25z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 7v4.3M16 20.7V25M8.2 11.5l3.7 2.15M20.1 18.35l3.7 2.15M8.2 20.5l3.7-2.15M20.1 13.65l3.7-2.15" stroke="var(--copper,#B4532A)" stroke-width="2.2" stroke-linecap="round"/></svg>Mekhane Apps</a><nav><a href="../../#apps">Apps</a><a href="../../guides/">Guides</a><a href="../../support/">Support</a><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a></nav></header><main>
+<p class="eyebrow">Guide · Jira Cloud</p>
+<h1>How to set a reminder on a Jira Cloud issue</h1>
+<p class="lede">“Remind me to check this on Monday” is one of the most common things people want from Jira, and Jira Cloud has no button for it. Here are the ways to get a reminder about an issue, what each one is good for, and the quickest way to remind yourself or a teammate at an exact time.</p>
+
+<h2>The options</h2>
+<table>
+<tr><th>Option</th><th>Good for</th><th>Limits</th></tr>
+<tr><td>Watch the issue</td><td>Hearing about changes</td><td>Tells you when something happens, not at a time you choose</td></tr>
+<tr><td>Due date plus an automation rule</td><td>Team-wide rules, such as “email the assignee when the due date arrives”</td><td>Set up by an admin per project; one rule for everyone, not a personal note; counts toward your plan’s automation usage</td></tr>
+<tr><td>A calendar or to-do app</td><td>Personal reminders</td><td>Lives outside Jira; teammates do not see it</td></tr>
+<tr><td>A reminder on the issue</td><td>“Remind me, or Ana, about this issue on Monday at 9:00”</td><td>Needs an admin to install an app once</td></tr>
+</table>
+
+<h2>Step by step with Follow-up Reminders for Jira</h2>
+<ol>
+  <li>A Jira administrator installs <a href="https://marketplace.atlassian.com/apps/2933513388/follow-up-reminders-for-jira">Follow-up Reminders for Jira</a> from the Atlassian Marketplace. It is free for up to 10 users.</li>
+  <li>Open the issue. The first time, click the <strong>+</strong> button under the issue title and choose <strong>Follow-up reminders</strong> under Apps.</li>
+  <li>Click <strong>Set reminder</strong>. Pick a date and time, or a quick pick: Tomorrow 9:00, In 3 days, Next Monday, or Day before due date.</li>
+  <li>Choose who to remind: you, the assignee, the reporter, or anyone you search by name. Add a short note, such as “Check whether the client replied”.</li>
+  <li>Optionally tick <strong>Also post a comment</strong>, so recipients also get Jira’s in-app notification. Save.</li>
+</ol>
+<figure class="shot"><img src="../../assets/guides/reminders-form.webp" alt="The Follow-up reminders panel on a Jira issue with date, quick picks, recipients and a note" width="1380" height="675" loading="lazy"><figcaption>Date, quick picks, recipients and a note, on the issue.</figcaption></figure>
+
+<h2>What happens at the chosen time</h2>
+<ul>
+  <li>Jira emails each recipient with your note and a link to the issue, within five minutes of the time you picked.</li>
+  <li>If you ticked the option, a comment on the issue mentions them, which shows up in Jira’s notification bell.</li>
+  <li>Times are in each person’s own Jira time zone, so “9:00” means 9:00 for you.</li>
+  <li>The <strong>My reminders</strong> page in the Apps menu lists everything you scheduled across all issues, upcoming and sent.</li>
+</ul>
+<figure class="shot"><img src="../../assets/guides/reminders-list.webp" alt="A reminder comment on a Jira issue and the My reminders page listing upcoming reminders" width="1380" height="675" loading="lazy"><figcaption>The reminder comment, and the My reminders page.</figcaption></figure>
+
+<h2>Good uses</h2>
+<ul>
+  <li><strong>Waiting on someone else:</strong> “Remind me Thursday to chase the vendor.”</li>
+  <li><strong>Handing over:</strong> remind a teammate the day before a due date, with context in the note.</li>
+  <li><strong>Following up after a release:</strong> “Check the error rate on Monday morning.”</li>
+</ul>
+
+<h2>Questions</h2>
+<h3>Does anything leave Atlassian?</h3>
+<p>No. Reminders are stored in Atlassian-hosted storage and the email is sent by Jira itself. The app qualifies for Runs on Atlassian and has no servers of its own.</p>
+<h3>Can a reminder repeat?</h3>
+<p>Not yet: reminders are one-off. For recurring, rule-based notifications, a Jira automation rule is the right tool.</p>
+<h3>Can I remind someone who cannot see the issue?</h3>
+<p>No. Jira only notifies people who can view the issue, so only they are offered as recipients.</p>
+
+<p><a class="btn" href="https://marketplace.atlassian.com/apps/2933513388/follow-up-reminders-for-jira">Get it on the Marketplace</a> &nbsp; <a class="btn secondary" href="../../apps/follow-up-reminders/">Documentation</a></p>
+</main><footer><span>&copy; 2026 Mekhane Apps &middot; Sebastián Esperanza, Buenos Aires, Argentina</span><span><a href="mailto:support@mekhaneapps.com">support@mekhaneapps.com</a> &middot; <a href="../../privacy/">Privacy</a> &middot; <a href="../../terms/">Terms</a> &middot; <a href="../../dpa/">DPA</a></span></footer></div></body></html>
